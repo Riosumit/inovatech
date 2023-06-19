@@ -1,0 +1,82 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    padding-top: 30px;
+    padding: 10px;
+    margin-top: 7vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+
+.container:nth-child(odd) {
+    flex-direction: row;
+}
+
+.container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.container img {
+    width: 18vw;
+}
+
+.writen {
+    width: 70vw;
+}
+
+.writen .heading {
+    font-size: 2rem;
+    margin-bottom: 5vh;
+}
+
+.elab {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.provide {
+    width: 95vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.provide .heading {
+    margin: 1vw;
+    width: 95vw;
+    text-align: left;
+    font-size: 2.5rem;
+}
+
+.provide .write {
+    margin: 0vw 2vw;
+    font-size: 1.5rem;
+}
+
+.faq {
+    width: 95vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.faq .heading {
+    margin: 1vw;
+    width: 95vw;
+    text-align: left;
+    font-size: 2.5rem;
+}
