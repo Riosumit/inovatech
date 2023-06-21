@@ -68,7 +68,7 @@ class AddIdea(APIView):
         
 class ShowIdea(APIView):
     def get(self, request, format=None):
-        Ideas = Idea.objects.all()
+        Ideas = reversed(Idea.objects.all())
         serializer = IdeaSerializer(Ideas, many=True)
         return JsonResponse(serializer.data, safe=False)
     
@@ -88,3 +88,9 @@ def getComments(request, pk):
         comments = reversed(Comment.objects.filter(comment_on=pk))
         serializer = CommentSerializer(comments, many=True)
         return JsonResponse(serializer.data, safe=False)
+
+def getIdeas(request, pk):
+    if request.method == "GET":
+        ideas = reversed(Idea.objects.filter(published_by=pk))
+        seriailizer = IdeaSerializer(ideas, many=True)
+        return JsonResponse(seriailizer.data, safe=False)

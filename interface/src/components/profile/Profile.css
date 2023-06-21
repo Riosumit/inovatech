@@ -1,0 +1,193 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.profile .profile_card{
+    margin-top: 20px;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(16, 250, 250, 0.381);
+    border-radius: 15px;
+}
+.profile .profile_card .photo{
+    font-size: 20vw;
+    color: rgb(29, 28, 28);
+}
+.profile .profile_card .info{
+    width: 70%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    font-size: 1.2rem;
+    grid-column-gap: 24px;
+
+}
+.profile .profile_card .info b{
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+}
+.profile .profile_card .info p{
+    grid-column: 2;
+    margin: 5px;
+}
+.profile .idea_box .author{
+    display: flex;
+    background-color: aqua;
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+}
+.profile .idea_box .author .dp{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: gray;
+}
+.profile .idea_box .author .poster{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 15px;
+}
+.profile .idea_box .author .connect{
+    border: 1px solid black;
+    background-color: rgb(70, 70, 222);
+    color: aliceblue;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: auto;
+}
+.idea_box{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 80vw;
+    margin: 15px;
+    background-color: rgb(162, 228, 228);
+    border-radius: 15px;
+}
+.idea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.profile .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile .idea img{
+    background-color: #8c8a8a;
+    padding: 10px;
+    margin-right: 30px;
+    width: 20%;
+}
+.profile .idea .title{
+    margin: 2px;
+    padding: 5px;
+    font-size: 2rem;
+    font-family: revert;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+}
+.profile .idea .desc{
+    padding: 15px;
+    padding-left: 25px;
+    font-size: 1.1rem;
+}
+.profile details{
+    margin-bottom: 15px;
+}
+.profile .comments{
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    color: rgb(50, 49, 49);
+    margin: 15px 15px 0px 15px;
+    cursor: pointer;
+}
+.comm{
+    background-color: aliceblue;
+    margin:0px 15px;
+}
+.comment_list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    max-height: 130px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 5px;
+}
+.comment{
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: start;
+    grid-template-columns: min-content;
+    margin: 0px 30px;
+    padding-top: 10px;
+    border-top: 1px solid black;
+}
+.comment .dp{
+    grid-row: 1;
+    grid-column: 1;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background-color: rgb(63, 62, 65);
+    margin: auto;
+}
+.comment .commentor{
+    grid-row: 1;
+    grid-column: 2;
+    margin: auto;
+    text-align: left;
+    width: 100%;
+    padding-left: 5px;
+    color: #252a2c;
+}
+.comment .text{
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    margin-left: 25px;
+    font-size: 1.2rem;
+}
+.post_comment{
+    position: relative;
+    width: 96%;
+    margin: 2%;
+    bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+.post_comment input{
+    width: 100%;
+    height: 35px;
+    border: 0px;
+    box-shadow: none;
+    margin: 0px;
+    padding-right: 35px;
+}
+.post_comment .send_icon{
+    position: absolute;
+    right: 5px;
+    font-size: 23px;
+    cursor: pointer;
+}

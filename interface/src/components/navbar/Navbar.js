@@ -30,7 +30,7 @@ const Navbar = () => {
       </div>
       {Real_Boolean(localStorage.getItem("loggedin")) ? (
         <div className="sign">
-          <Link to='' className='signin'>Profile</Link>
+          <Link to='/profile' className='signin'>Profile</Link>
           <Link to='' className='signup' onClick={logout}>Logout</Link>
         </div>
       ):(

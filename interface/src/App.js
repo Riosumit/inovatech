@@ -7,6 +7,7 @@ import Home from './components/home/home';
 import Signup from './components/signup/Signup';
 import Explore from './components/explore/Explore';
 import Publish from './components/publish/Publish';
+import Profile from './components/profile/Profile';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import Footer from './components/footer/Footer';
 
@@ -31,6 +32,7 @@ function App() {
         <Route path='/' element = {<Home/>} />
         <Route path='/explore' element = {<Explore/>} />
         <Route path='/publish' element = {<Publish/>} />
+        <Route path='/profile' element = {<Profile/>} />
         <Route path='/login' element = {<LoginUser/>} />
         <Route path='/signup' element = {<Signup/>} />
       </Routes>

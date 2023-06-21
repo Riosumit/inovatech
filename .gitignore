@@ -2,7 +2,7 @@
 
 # dependencies
 /api/__pycache__
-/migrations/__pycache__
+/api/migrations
 /inovatech/__pycache__
 /interface/node_modules
 /.pnp
