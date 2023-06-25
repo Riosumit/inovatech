@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'inovatech.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ixhrtatz',
-        'USER': 'ixhrtatz',
-        'PASSWORD': '5CDjDIO1ADK6oBLte1N9boA6qp-D_y7F',
-        'HOST': 'tiny.db.elephantsql.com',
-        'PORT': '5432',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'OtWrfazW6VDlkaaz3C2w',
+        'HOST': 'containers-us-west-32.railway.app',
+        'PORT': '7903',
     }
 }
 
