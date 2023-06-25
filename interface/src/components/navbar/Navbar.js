@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="nav">
       <div className="title">
-        <img src="http://localhost:8000/static/img/logo.png" className="logo" />
+        <img src="https://inovatech-riosumit.vercel.app/static/img/logo.png" className="logo" />
         <div className="name"><span style={{color:"rgb(16 103 173)"}}>Inova</span><span style={{color:"rgb(12 192 223)"}}>Tech</span></div>
       </div>
       <div className="navigations">

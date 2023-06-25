@@ -12,7 +12,7 @@ const Profile = () => {
         async function userDetails() {
             try {
                 var id = localStorage.getItem("id")
-                const details = await axios.get("http://127.0.0.1:8000/api/user/" + id)
+                const details = await axios.get("https://inovatech-riosumit.vercel.app/api/user/" + id)
                 setUser(details.data)
             }
             catch (error) {
@@ -23,7 +23,7 @@ const Profile = () => {
         async function getIdea() {
             try {
                 var id = localStorage.getItem("id")
-                const ideas = await axios.get("http://127.0.0.1:8000/api/ideas/" + id)
+                const ideas = await axios.get("https://inovatech-riosumit.vercel.app/api/ideas/" + id)
                 console.log(ideas.data)
                 setIdeas(ideas.data)
             }
@@ -46,7 +46,7 @@ const Profile = () => {
     }
     async function getUser(id) {
         try {
-            const details = await axios.get("http://127.0.0.1:8000/api/user/" + id)
+            const details = await axios.get("https://inovatech-riosumit.vercel.app/api/user/" + id)
             const data = details.data
             return data[0]
         }
@@ -56,7 +56,7 @@ const Profile = () => {
     }
     async function getComment(id) {
         try {
-            const comments = await axios.get("http://127.0.0.1:8000/api/comment/" + id)
+            const comments = await axios.get("https://inovatech-riosumit.vercel.app/api/comment/" + id)
             setComments(comments.data)
         }
         catch (error) {
@@ -73,7 +73,7 @@ const Profile = () => {
             }
             const body = JSON.stringify(data);
             console.log(body)
-            const comment = await axios.post("http://127.0.0.1:8000/api/comment", body);
+            const comment = await axios.post("https://inovatech-riosumit.vercel.app/api/comment", body);
             console.log(comment.data)
             getComment(id)
             document.getElementsByClassName('comment_text')[i].value = "";

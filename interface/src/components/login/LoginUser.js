@@ -19,7 +19,7 @@ const LoginUser = () => {
         "password": document.getElementById('password').value,
       }
       const body = JSON.stringify(data)
-      const check_login = await axios.post("http://127.0.0.1:8000/api/login",body)
+      const check_login = await axios.post("https://inovatech-riosumit.vercel.app/api/login",body)
       if(check_login.data.found == "true"){
         console.log(123)
         localStorage.setItem("loggedin", true)

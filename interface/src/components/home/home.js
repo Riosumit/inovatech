@@ -5,21 +5,21 @@ const home = () => {
     <div>
       <div className="content">
         <div className="container">
-          <img src={"http://localhost:8000/static/img/idea.jpg"} alt="" />
+          <img src={"https://inovatech-riosumit.vercel.app/static/img/idea.jpg"} alt="" />
           <div className="writen">
             <div className="heading">Business Idea</div>
             <div className="elab">A business idea is a concept that can be used for financial gain that is usually centered on a product or service that can be offered for money. An idea is the first milestone in the process of building a successful business. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima rem molestias eaque, eligendi doloribus omnis dolor sint architecto animi soluta blanditiis dolore, maiores et aperiam minus totam itaque error nam eius vero expedita rerum, facilis vitae praesentium? Consectetur velit cumque, provident incidunt, officia nostrum eos in, fugit ipsa ratione facere alias veniam commodi minima recusandae excepturi eveniet quae vel voluptas asperiores voluptatem.</div>
           </div>
         </div>
         <div className="container">
-          <img src={"http://localhost:8000/static/img/inovation.jpg"} alt="" />
+          <img src={"https://inovatech-riosumit.vercel.app/static/img/inovation.jpg"} alt="" />
           <div className="writen">
             <div className="heading">Inovation</div>
             <div className="elab">A business idea is a concept that can be used for financial gain that is usually centered on a product or service that can be offered for money. An idea is the first milestone in the process of building a successful business. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima rem molestias eaque, eligendi doloribus omnis dolor sint architecto animi soluta blanditiis dolore, maiores et aperiam minus totam itaque error nam eius vero expedita rerum, facilis vitae praesentium? Consectetur velit cumque, provident incidunt, officia nostrum eos in, fugit ipsa ratione facere alias veniam commodi minima recusandae excepturi eveniet quae vel voluptas asperiores voluptatem.</div>
           </div>
         </div>
         <div className="container">
-          <img src={"http://localhost:8000/static/img/startup.jpg"} alt="" />
+          <img src={"https://inovatech-riosumit.vercel.app/static/img/startup.jpg"} alt="" />
           <div className="writen">
             <div className="heading">StartUp</div>
             <div className="elab">A business idea is a concept that can be used for financial gain that is usually centered on a product or service that can be offered for money. An idea is the first milestone in the process of building a successful business. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima rem molestias eaque, eligendi doloribus omnis dolor sint architecto animi soluta blanditiis dolore, maiores et aperiam minus totam itaque error nam eius vero expedita rerum, facilis vitae praesentium? Consectetur velit cumque, provident incidunt, officia nostrum eos in, fugit ipsa ratione facere alias veniam commodi minima recusandae excepturi eveniet quae vel voluptas asperiores voluptatem.</div>
