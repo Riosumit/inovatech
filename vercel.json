@@ -18,13 +18,18 @@
       }
     ],
     "routes": [
-      {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "inovatech/wsgi.py"
-      }
+        { 
+            "src": "/static/(.*)",
+             "dest": "static/$1" 
+        },
+
+        { 
+            "src": "/media/(.*)", 
+            "dest": "media/$1" 
+        },
+        {
+            "src": "/(.*)",
+            "dest": "inovatech/wsgi.py"
+        }
     ]
   }
