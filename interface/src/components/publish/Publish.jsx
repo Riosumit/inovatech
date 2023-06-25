@@ -30,7 +30,7 @@ const Publish = () => {
             console.log(post_event.data)
             if (post_event.data.status === "success") {
                 document.getElementsByClassName("formcontent")[0].reset();
-                document.getElementsByClassName("err")[0].innerHTML = "Event Posted Succesfully";
+                document.getElementsByClassName("err")[0].innerHTML = "Idea Posted Succesfully";
                 document.getElementsByClassName("err")[0].style.color = "green";
             }
         }

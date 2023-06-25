@@ -21,9 +21,10 @@
 .nav .logo {
   height: 57px;
   width: 57px;
-  background-color: grey;
+  /* background-color: grey; */
   border-radius: 30px;
   margin: 16px 22px;
+  margin-right: 5px;
 }
 
 .nav .name {

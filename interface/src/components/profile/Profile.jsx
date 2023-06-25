@@ -125,7 +125,7 @@ const Profile = () => {
                                                 })
                                                 return (
                                                     <div className="comment">
-                                                        <div className="dp"></div>
+                                                        <IoPersonCircleSharp className='dp' />
                                                         <div className={comment.comment_by}></div>
                                                         <div className="text">{comment.comment_text}</div>
                                                     </div>

@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'inovatech.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'inovatech',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ixhrtatz',
+        'USER': 'ixhrtatz',
+        'PASSWORD': '5CDjDIO1ADK6oBLte1N9boA6qp-D_y7F',
+        'HOST': 'tiny.db.elephantsql.com',
+        'PORT': '5432',
     }
 }
 
@@ -143,6 +143,7 @@ MEDIA_URL = "/media/"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
     'http://localhost:3000',
-    'http://localhost:8000'
+    'https://inovatech.netlify.app',
 ]

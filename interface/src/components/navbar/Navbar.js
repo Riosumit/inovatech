@@ -20,8 +20,8 @@ const Navbar = () => {
   return (
     <div className="nav">
       <div className="title">
-        <div className="logo"></div>
-        <div className="name"><span style={{color:"#C01B1B"}}>Inova</span><span style={{color:"#43CCA3"}}>Tech</span></div>
+        <img src="http://localhost:8000/static/img/logo.png" className="logo" />
+        <div className="name"><span style={{color:"rgb(16 103 173)"}}>Inova</span><span style={{color:"rgb(12 192 223)"}}>Tech</span></div>
       </div>
       <div className="navigations">
         <Link to="/">Home</Link>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { AiOutlineSend } from 'react-icons/ai'
+import { IoPersonCircleSharp } from "react-icons/io5";
 
 
 const Explore = () => {
@@ -82,7 +83,7 @@ const Explore = () => {
                     return (
                         <div className="idea_box">
                             <div className="author">
-                                <div className="dp"></div>
+                                <IoPersonCircleSharp className="dp" />
                                 <h3 className="poster"></h3>
                                 <a href='' target='_blank' className="connect">Connect</a>
                             </div>
@@ -107,7 +108,7 @@ const Explore = () => {
                                                 })
                                                 return (
                                                     <div className="comment">
-                                                        <div className="dp"></div>
+                                                        <IoPersonCircleSharp className="dp" />
                                                         <div className={comment.comment_by}></div>
                                                         <div className="text">{comment.comment_text}</div>
                                                     </div>

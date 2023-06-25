@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "inovatech/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "inovatech/wsgi.py"
+      }
+    ]
+}
