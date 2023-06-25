@@ -14,6 +14,20 @@ InovaTech aims to foster a community of creative individuals who can share their
 - Collaboration Tools: InovaTech provides tools and features to facilitate collaboration between users, such as private messaging and file sharing.
 - Idea Search: Users can search for ideas based on different criteria, such as categories or keywords.
 
+## API Endpoints
+
+The following API endpoints are available:
+
+- `POST /api/login`: User login endpoint.
+- `POST /api/signup`: User registration endpoint.
+- `GET /api/islogin`: Check if the user is logged in.
+- `POST /api/publish`: Publish a new idea.
+- `GET /api/ideas`: Retrieve a list of all ideas.
+- `GET /api/user/<pk>`: Retrieve user details by ID.
+- `POST /api/comment`: Add a new comment to an idea.
+- `GET /api/comment/<pk>`: Retrieve comments for a specific idea.
+- `GET /api/ideas/<pk>`: Retrieve ideas published by a specific user.
+
 ## Getting Started
 
 To get started with InovaTech, follow these steps:
