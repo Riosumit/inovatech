@@ -14,6 +14,9 @@ InovaTech aims to foster a community of creative individuals who can share their
 - Collaboration Tools: InovaTech provides tools and features to facilitate collaboration between users, such as private messaging and file sharing.
 - Idea Search: Users can search for ideas based on different criteria, such as categories or keywords.
 
+## Project Screenshots
+[https://drive.google.com/file/d/1Ef109OGOewovqX4J3Z6RjLmfnVuGDCfG/view?usp=sharing](https://drive.google.com/drive/folders/1x-7FRm7E8JUdpM9bmnF_vyIUd4MmDsTp?usp=sharing)
+
 ## API Endpoints
 
 The following API endpoints are available:
