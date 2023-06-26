@@ -23,7 +23,7 @@ const Signup = () => {
             }
             if(document.getElementById('password').value===document.getElementById('cpassword').value){
                 const body = JSON.stringify(data)
-                const signup = await axios.post("https://inovatech-riosumit.vercel.app/signup", body)
+                const signup = await axios.post("https://inovatech-riosumit.vercel.app/api/signup", body)
                 if (signup.data.status === "success") {
                     localStorage.setItem("loggedin", true)
                     localStorage.setItem("id", signup.data.data.id)
