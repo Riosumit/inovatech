@@ -12,6 +12,7 @@ const Publish = () => {
         }
     }, [])
     async function Post() {
+        document.getElementsByClassName('buffer')[0].style.display="flex";
         try {
             const form = new FormData();
             let title = document.getElementById("title").value;
@@ -22,7 +23,7 @@ const Publish = () => {
             form.append('title', title);
             form.append('description', desc);
             form.append('image', image, image_name);
-            const post_event = await axios.post("https://inovatech-riosumit.vercel.app/api/publish", form, {
+            const post_event = await axios.post("http://localhost:8000/api/publish", form, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
@@ -37,9 +38,13 @@ const Publish = () => {
         catch (error) {
             console.log(error)
         }
+        document.getElementsByClassName('buffer')[0].style.display="none";
     }
     return (
         <div>
+            <div className="buffer">
+                <img className='buffer_img' src="https://i.gifer.com/VAyR.gif" alt="" />
+            </div>
             <div className='publish'>
                 <div className="form">
                     <div className="formhead">Publish Idea</div>
