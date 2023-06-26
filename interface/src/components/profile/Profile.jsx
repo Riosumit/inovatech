@@ -41,9 +41,6 @@ const Profile = () => {
             return false
         }
     }
-    function genrate_url(s) {
-        return "http://localhost:8000" + s
-    }
     async function getUser(id) {
         try {
             const details = await axios.get("https://inovatech-riosumit.vercel.app/api/user/" + id)
@@ -105,7 +102,7 @@ const Profile = () => {
                     return (
                         <div className="idea_box">
                             <div className="idea">
-                                <img src={genrate_url(ideas.image)} alt="" />
+                                <img src={ideas.image} alt="" />
                                 <div className="content">
                                     <h2 className="title">{ideas.title}</h2>
                                     <div className="desc">{ideas.description}</div>

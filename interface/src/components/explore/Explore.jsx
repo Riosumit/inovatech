@@ -13,8 +13,7 @@ const Explore = () => {
     useEffect(() => {
         async function getAllIdea() {
             try {
-                const ideas = await axios.get("http://localhost:8000/api/ideas")
-                console.log(ideas.data)
+                const ideas = await axios.get("https://inovatech-riosumit.vercel.app/api/ideas")
                 setIdeas(ideas.data)
             }
             catch (error) {
@@ -30,9 +29,6 @@ const Explore = () => {
         else {
             return false
         }
-    } 
-    function genrate_url(s) {
-        return "https://res.cloudinary.com/dusnzf3o5/image/upload/v1687762608/" + s
     }
     async function getUser(id) {
         try {
