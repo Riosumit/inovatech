@@ -13,7 +13,8 @@ const Explore = () => {
     useEffect(() => {
         async function getAllIdea() {
             try {
-                const ideas = await axios.get("https://inovatech-riosumit.vercel.app/api/ideas")
+                const ideas = await axios.get("http://localhost:8000/api/ideas")
+                console.log(ideas.data)
                 setIdeas(ideas.data)
             }
             catch (error) {
@@ -31,7 +32,7 @@ const Explore = () => {
         }
     } 
     function genrate_url(s) {
-        return "http://localhost:8000" + s
+        return "https://res.cloudinary.com/dusnzf3o5/image/upload/v1687762608/" + s
     }
     async function getUser(id) {
         try {
@@ -88,7 +89,7 @@ const Explore = () => {
                                 <a href='' target='_blank' className="connect">Connect</a>
                             </div>
                             <div className="idea">
-                                <img src={genrate_url(ideas.image)} alt="" />
+                                <img src={ideas.image} alt="" />
                                 <div className="content">
                                     <h2 className="title">{ideas.title}</h2>
                                     <div className="desc">{ideas.description}</div>

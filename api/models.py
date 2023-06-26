@@ -15,7 +15,7 @@ class Idea(models.Model):
     published_by = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True,related_name='User_Idea')
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=200000)
-    image = models.ImageField(upload_to="images", blank=True)
+    image = models.ImageField(upload_to="images/", blank=True)
 
 class Comment(models.Model):
     comment_on = models.ForeignKey('Idea', on_delete=models.SET_NULL, null=True, blank=True,related_name='Idea_Comment')

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'corsheaders',
     'rest_framework',
     'api',
@@ -146,4 +149,13 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
     'http://localhost:3000',
     'https://inovatech.netlify.app',
+    'https://inovatech-riosumit.vercel.app',
 ]
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dusnzf3o5',
+    'API_KEY': '668657336523546',
+    'API_SECRET': 'V4WQR212VM0rJTbesd5kPh_kta8'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

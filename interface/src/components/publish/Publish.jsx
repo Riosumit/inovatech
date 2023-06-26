@@ -22,7 +22,7 @@ const Publish = () => {
             form.append('title', title);
             form.append('description', desc);
             form.append('image', image, image_name);
-            const post_event = await axios.post("http://127.0.0.1:8000/api/publish", form, {
+            const post_event = await axios.post("https://inovatech-riosumit.vercel.app/api/publish", form, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
