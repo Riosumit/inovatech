@@ -14,7 +14,7 @@ const Update = () => {
         }
         async function idea(){
             var id = localStorage.getItem("update_id");
-            const idea = await axios.get("hhttps://inovatech-riosumit.vercel.app/api/idea/"+id);
+            const idea = await axios.get("https://inovatech-riosumit.vercel.app/api/idea/"+id);
             document.getElementById("title").value = idea.data.title;
             document.getElementById("desc").value = idea.data.description;
             document.getElementById("image").files[0] = idea.data.image;
