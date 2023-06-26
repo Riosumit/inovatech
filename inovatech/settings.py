@@ -148,7 +148,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
     'http://localhost:3000',
-    'https://inovatech.netlify.app',
+    'https://inovatech12.netlify.app',
     'https://inovatech-riosumit.vercel.app',
 ]
 
