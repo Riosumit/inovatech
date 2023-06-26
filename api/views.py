@@ -4,8 +4,10 @@ from .models import User, Idea, Comment
 from .serializer import UserSerializer, IdeaSerializer, UserDetailSerializer, CommentSerializer
 from rest_framework.views import APIView
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.decorators import authentication_classes
+from rest_framework.decorators import authentication_classes, permission_classes
+from rest_framework.permissions import AllowAny
 from rest_framework.parsers import JSONParser, MultiPartParser, FormParser
+
 # Create your views here.
 @csrf_exempt
 def GetUser(request, pk):
@@ -72,6 +74,38 @@ class ShowIdea(APIView):
         serializer = IdeaSerializer(Ideas, many=True)
         return JsonResponse(serializer.data, safe=False)
     
+def getIdea(request,pk):
+    if request.method == "GET":
+        idea = Idea.objects.get(pk=pk)
+        if idea:
+            serializer = IdeaSerializer(idea, many=False)
+            return JsonResponse(serializer.data, safe=False)
+        return JsonResponse({"success":"False", "msg": "Idea doesn't exist"}, safe=False)
+    else:
+         return JsonResponse({"success":"False", "msg": (request.method + " method is not allowed")}, safe=False)
+    
+
+def deleteIdea(request, pk):
+    if request.method == "GET":
+        idea = Idea.objects.filter(id=pk)
+        if idea:
+            idea.delete()
+            return JsonResponse({"success":"True", "msg": "Idea deleted succesfully"}, safe=False)
+        return JsonResponse({"success":"False", "msg": "Idea doesn't exist"}, safe=False)
+
+class UpdateIdea(APIView):
+    parser_classes = (MultiPartParser, FormParser,)
+    def post(self, request, format=None):
+        print(1)
+        idea = Idea.objects.get(id=5)
+        print(request)
+        serializer = IdeaSerializer(instance=idea, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({"success":True, "msg": "Updated Successfully"}, safe=False)
+        else:
+            return JsonResponse({"success":False, "msg": serializer.errors}, safe=False)
+        
 class AddComment(APIView):
     def post(self, request, format=None):
         jsonData = JSONParser().parse(request)

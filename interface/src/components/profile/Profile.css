@@ -73,12 +73,68 @@
     background-color: rgb(162, 228, 228);
     border-radius: 15px;
 }
+.idea_box .buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.idea_box .buttons .delete{
+    padding: 7px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgb(240, 23, 23);
+    width: 70px;
+    color: aliceblue;
+    font-weight: 600;
+}
+.warning{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.089);
+    z-index: 10;
+}
+.warning .warn{
+    background-color: aliceblue;
+    border-radius: 5px;
+    max-width: 90vw;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.warning .warn .choice{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.warning .warn .choice button{
+    width: 30%;
+}
+.idea_box .buttons .update{
+    padding: 7px;
+    margin: 10px;
+    margin-left: auto;
+    border-radius: 5px;
+    background-color: rgb(23, 37, 240);
+    width: 70px;
+    color: aliceblue;
+    font-weight: 600;
+}
 .idea{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    padding-top: 0px;
 }
 .profile .content{
     display: flex;

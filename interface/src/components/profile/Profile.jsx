@@ -3,11 +3,14 @@ import axios from 'axios'
 import { useState, useEffect } from 'react';
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { AiOutlineSend } from 'react-icons/ai'
+import { useNavigate } from 'react-router';
 
 const Profile = () => {
     const [ideas, setIdeas] = useState([])
     const [user, setUser] = useState([])
     const [comments, setComments] = useState([])
+    const navigate = useNavigate();
+    var del_id = 0;
     useEffect(() => {
         async function userDetails() {
             try {
@@ -20,19 +23,18 @@ const Profile = () => {
             }
         }
         userDetails()
-        async function getIdea() {
-            try {
-                var id = localStorage.getItem("id")
-                const ideas = await axios.get("https://inovatech-riosumit.vercel.app/api/ideas/" + id)
-                console.log(ideas.data)
-                setIdeas(ideas.data)
-            }
-            catch (error) {
-                console.log(error)
-            }
-        }
         getIdea()
     }, [])
+    async function getIdea() {
+        try {
+            var id = localStorage.getItem("id")
+            const ideas = await axios.get("https://inovatech-riosumit.vercel.app/api/ideas/" + id)
+            setIdeas(ideas.data)
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
     function Real_Boolean(s) {
         if (s == 'true') {
             return true
@@ -61,7 +63,6 @@ const Profile = () => {
         }
     }
     async function Comment(id, i) {
-        console.log(i)
         try {
             const data = {
                 "comment_on": id,
@@ -69,9 +70,7 @@ const Profile = () => {
                 "comment_text": String(document.getElementsByClassName('comment_text')[i].value),
             }
             const body = JSON.stringify(data);
-            console.log(body)
             const comment = await axios.post("https://inovatech-riosumit.vercel.app/api/comment", body);
-            console.log(comment.data)
             getComment(id)
             document.getElementsByClassName('comment_text')[i].value = "";
         }
@@ -79,8 +78,37 @@ const Profile = () => {
             console.log(error)
         }
     }
+    function show_warning(id){
+        del_id = id
+        document.getElementsByClassName('warning')[0].style.display = "flex";
+    }
+    async function delete_idea(){
+        document.getElementsByClassName('warning')[0].style.display = "none";
+        try {
+            const comment = await axios.get("http://localhost:8000/api/delete/"+del_id);
+        }
+        catch (error) {
+            console.log(error)
+        }
+        getIdea()
+    }
+    function close_warning(){
+        document.getElementsByClassName('warning')[0].style.display = "none";
+    }
+    function update_idea(id){
+        localStorage.setItem("update_id", id)
+        navigate("/update");
+    }
     return (
         <div className='profile'>
+            <div className="warning">
+                <div className="warn">
+                    Are You Sure? You want to delete<p></p>
+                    <div className="choice">
+                        <button onClick={delete_idea}>Yes</button><button onClick={close_warning}>No</button>
+                    </div>
+                </div>
+            </div>
             {
                 user.map((user, i) => {
                     return (
@@ -101,6 +129,10 @@ const Profile = () => {
                 ideas.map((ideas, i) => {
                     return (
                         <div className="idea_box">
+                            <div className="buttons">
+                                <button className='update' onClick={() =>{update_idea(ideas.id)}}>Update</button>
+                                <button className='delete' onClick={() =>{show_warning(ideas.id)}}>Delete</button>
+                            </div>
                             <div className="idea">
                                 <img src={ideas.image} alt="" />
                                 <div className="content">

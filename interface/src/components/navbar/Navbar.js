@@ -9,6 +9,9 @@ const Navbar = () => {
     localStorage.setItem("id", null);
     setnav(nav+1)
   }
+  function reload(){
+    setnav(nav+1)
+  }
   function Real_Boolean(s){
     if(s=='true'){
       return true
@@ -18,7 +21,7 @@ const Navbar = () => {
     }
   }
   return (
-    <div className="nav">
+    <div className="nav" onClick={reload}>
       <div className="title">
         <img src="https://inovatech-riosumit.vercel.app/static/img/logo.png" className="logo" />
         <div className="name"><span style={{color:"rgb(16 103 173)"}}>Inova</span><span style={{color:"rgb(12 192 223)"}}>Tech</span></div>

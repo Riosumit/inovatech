@@ -10,6 +10,7 @@ import Publish from './components/publish/Publish';
 import Profile from './components/profile/Profile';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import Footer from './components/footer/Footer';
+import Update from './components/update/Update';
 
 function App() {
   
@@ -33,6 +34,7 @@ function App() {
         <Route path='/explore' element = {<Explore/>} />
         <Route path='/publish' element = {<Publish/>} />
         <Route path='/profile' element = {<Profile/>} />
+        <Route path='/update' element = {<Update/>} />
         <Route path='/login' element = {<LoginUser/>} />
         <Route path='/signup' element = {<Signup/>} />
       </Routes>
