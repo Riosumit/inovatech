@@ -96,8 +96,8 @@ def deleteIdea(request, pk):
 class UpdateIdea(APIView):
     parser_classes = (MultiPartParser, FormParser,)
     def post(self, request, format=None):
-        print(1)
-        idea = Idea.objects.get(id=5)
+        id = request.data.get("id")
+        idea = Idea.objects.get(id=id)
         print(request)
         serializer = IdeaSerializer(instance=idea, data=request.data)
         if serializer.is_valid():

@@ -85,7 +85,7 @@ const Profile = () => {
     async function delete_idea(){
         document.getElementsByClassName('warning')[0].style.display = "none";
         try {
-            const comment = await axios.get("http://localhost:8000/api/delete/"+del_id);
+            const comment = await axios.get("https://inovatech-riosumit.vercel.app/api/delete/"+del_id);
         }
         catch (error) {
             console.log(error)
