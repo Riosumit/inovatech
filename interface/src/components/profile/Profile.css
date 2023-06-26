@@ -23,7 +23,7 @@
     display: grid;
     grid-template-columns: auto auto;
     justify-content: start;
-    font-size: 1.2rem;
+    font-size: 2vw;
     grid-column-gap: 24px;
 
 }
@@ -128,7 +128,7 @@
     color: aliceblue;
     font-weight: 600;
 }
-.idea{
+.profile .idea{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -151,7 +151,7 @@
 .profile .idea .title{
     margin: 2px;
     padding: 5px;
-    font-size: 2rem;
+    font-size: 2.5vw;
     font-family: revert;
     font-weight: 600;
     width: 100%;
@@ -160,7 +160,7 @@
 .profile .idea .desc{
     padding: 15px;
     padding-left: 25px;
-    font-size: 1.1rem;
+    font-size: 1.5vw;
 }
 .profile details{
     margin-bottom: 15px;
@@ -173,4 +173,33 @@
     color: rgb(50, 49, 49);
     margin: 15px 15px 0px 15px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .profile .idea_box{
+        width: 92vw;
+    }
+    .profile .idea{
+        flex-direction: column;
+    }
+    .profile .idea img{
+        width: 300px;
+        max-width: 95%;
+        margin: auto;
+    }
+    .profile .idea .title{
+        font-size: 1.5rem;
+    }
+    .profile .idea .desc{
+        font-size: 1rem;
+    }
+    .profile .profile_card{
+        flex-direction: column;
+    }
+    .profile .profile_card .info{
+        margin: auto;
+        max-width: 90%;
+        width: fit-content;
+        font-size: 0.9rem;
+    }
 }

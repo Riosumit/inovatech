@@ -9,8 +9,9 @@
     width: 610px;
     max-width: 90vw;
     background: linear-gradient(128.95deg, #19E722 -8.63%, rgba(179, 255, 182, 0) 138.55%);
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 8px;
     padding-bottom: 4vh;
+    border: 1px solid black;
 }
 .boxhead{
     display: flex;
@@ -22,8 +23,9 @@
     font-weight: 500;
     max-width: 90vw;
     background: #64FC7C;
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
     padding: 5px 0px;
+    border-bottom: 1px solid black;
 }
 .boxcontent{
     display: flex;

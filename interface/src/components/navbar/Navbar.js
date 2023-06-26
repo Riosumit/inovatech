@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useEffect } from "react";
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { IoReorderThree } from "react-icons/io5";
+
 const Navbar = () => {
   const [nav, setnav] = useState(0)
   function logout(){
@@ -18,6 +20,14 @@ const Navbar = () => {
     }
     else{
       return false
+    }
+  }
+  function show_menu(){
+    if (document.getElementsByClassName("mobile_nav")[0].style.display === "flex"){
+      document.getElementsByClassName("mobile_nav")[0].style.display = "none";
+    }
+    else{
+      document.getElementsByClassName("mobile_nav")[0].style.display = "flex"
     }
   }
   return (
@@ -42,6 +52,23 @@ const Navbar = () => {
           <Link to='/signup' className='signup'>SignUp</Link>
         </div>
       )}
+      <IoReorderThree className='three_line' onClick={show_menu}/>
+      <div className="mobile_nav">
+        <Link to="/">Home</Link>
+        <Link to="/explore">Explore</Link>
+        <Link to="/">About</Link>
+        {Real_Boolean(localStorage.getItem("loggedin")) ? (
+          <div className='mobile_sign'>
+            <Link to='/profile'>Profile</Link>
+            <Link to='' onClick={logout}>Logout</Link>
+          </div>
+        ):(
+          <div className='mobile_sign'>
+            <Link to='/login'>SignIn</Link>
+            <Link to='/signup'>SignUp</Link>
+          </div>
+        )}
+      </div>
     </div>
   )
 }

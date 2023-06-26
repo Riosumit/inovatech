@@ -17,6 +17,9 @@
     justify-content: center;
     background-color: rgba(128, 128, 128, 0.297);
 }
+.buffer_img{
+    max-width: 90vw;
+}
 .form{
     width: 800px;
     max-width: 90vw;

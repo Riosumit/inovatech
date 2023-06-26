@@ -124,7 +124,7 @@ const Profile = () => {
                     )
                 })
             }
-            <h1>Posted Ideas</h1>
+            {ideas?<h1>Posted Ideas</h1>:<div></div>}
             {
                 ideas.map((ideas, i) => {
                     return (

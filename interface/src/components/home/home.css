@@ -33,12 +33,12 @@
 }
 
 .writen .heading {
-    font-size: 2rem;
+    font-size: 3vw;
     margin-bottom: 5vh;
 }
 
 .elab {
-    font-size: 1.5rem;
+    font-size: 2vw;
     text-align: left;
 }
 
@@ -79,4 +79,39 @@
     width: 95vw;
     text-align: left;
     font-size: 2.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        margin: 20px;
+        width: 90vw;
+    }
+    .container:nth-child(odd){
+        flex-direction: column;
+    }
+    .container:nth-child(even){
+        flex-direction: column;
+    }
+    .container img{
+        width: 200px;
+        max-width: 90vw;
+    }
+    .writen {
+        width: 90vw;
+    }
+    .writen .heading {
+        font-size: 1.5rem;
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+    }
+    .elab {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .provide .heading {
+        font-size: 2rem;
+    }
+    .provide .write {
+        font-size: 1.2rem;
+    }
 }

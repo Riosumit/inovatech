@@ -9,8 +9,9 @@
     width: 1044px;
     max-width: 90vw;
     background: linear-gradient(128.95deg, #19E7DA -8.63%, rgba(179, 255, 246, 0) 138.55%);
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 8px;
     padding-bottom: 4vh;
+    border: 1px solid black;
 }
 .signup .boxhead{
     display: flex;
@@ -21,9 +22,10 @@
     font-weight: 500;
     max-width: 90vw;
     background: #4CE4D2;
-    border-radius: 40px 40px 0px 0px;
+    border-radius: 8px 8px 0px 0px;
     padding: 5px 0px;
     margin-bottom: 33px;
+    border-bottom: 1px solid black;
 }
 .signup .boxcontent{
     display: flex;
@@ -71,4 +73,17 @@
 }
 .boxcontent a{
     color: blue;
+}
+
+@media screen and (max-width:620px) {
+    .signup{
+        margin-top: 160px;
+        margin-bottom: 50px;
+    }
+    .signup .row{
+        flex-direction: column;
+    }
+    .signup label{
+        width: 90%;
+    }
 }

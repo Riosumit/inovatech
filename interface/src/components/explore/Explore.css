@@ -78,7 +78,7 @@
 .explore .idea .title{
     margin: 2px;
     padding: 5px;
-    font-size: 2rem;
+    font-size: 2.5vw;
     font-family: revert;
     font-weight: 600;
     width: 100%;
@@ -87,7 +87,7 @@
 .explore .idea .desc{
     padding: 15px;
     padding-left: 25px;
-    font-size: 1.1rem;
+    font-size: 1.5vw;
 }
 .explore details{
     margin-bottom: 15px;
@@ -171,4 +171,23 @@
     right: 5px;
     font-size: 23px;
     cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .explore .idea_box{
+        width: 92vw;
+    }
+    .explore .idea{
+        flex-direction: column;
+    }
+    .explore .idea img{
+        width: 300px;
+        max-width: 95%;
+        margin: auto;
+    }
+    .explore .idea .title{
+        font-size: 1.5rem;
+    }
+    .explore .idea .desc{
+        font-size: 1rem;
+    }
 }
