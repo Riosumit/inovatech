@@ -38,7 +38,7 @@ const Update = () => {
                 let image_name = document.getElementById("image").files[0].name;
                 form.append('image', image, image_name);
             }
-            const update_event = await axios.post("http://localhost:8000/api/update", form, {
+            const update_event = await axios.post("https://inovatech-riosumit.vercel.app/api/update", form, {
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
